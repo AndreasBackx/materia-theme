@@ -3,36 +3,6 @@
 
 @import 'color-palette';
 
-// Rubecula
-$black: #141414;
-$blackGray: #1C1C1C;
-$darkerGray: #242424;
-$darkGray: #404040;
-$gray: #6E6E6E;
-$lightGray: #CECECE;
-$white: #E5E5E5;
-
-$yellow: #CCC47A;
-$pink: #E52E71;
-$green: #9CCC3D;
-$cyan: #6CC7D9;
-$orange: #D9882B;
-$purple: #A082D9;
-
-// Background colors
-$darkBackground: $black;
-$background: $blackGray;
-$lightBackground: $darkerGray;
-$highlightBackground: $darkGray;
-
-$border: $darkGray;
-$matchBorder: $yellow;
-
-// Foregrounds
-$brightForeground: $white;
-$foreground: $lightGray;
-$inactiveForeground: $gray;
-
 @function gtkalpha($c, $a) {
   @return unquote("alpha(#{$c}, #{$a})");
 }
@@ -58,14 +28,6 @@ $titlebar_disabled_secondary_fg_color: rgba($inactiveForeground, 0.5);
 $titlebar_track_color:                 rgba($inactiveForeground, 0.5);
 $titlebar_divider_color:               rgba($white, 0.12);
 
-// $inverse_fg_color:                    $white;
-// $inverse_secondary_fg_color:          $lightGray;
-// $inverse_hint_fg_color:               $inactiveForeground;
-// $inverse_disabled_fg_color:           $inactiveForeground;
-// $inverse_disabled_secondary_fg_color: rgba($inactiveForeground, 0.5);
-// $inverse_track_color:                 rgba($inactiveForeground, 0.5);
-// $inverse_divider_color:               rgba($white, 0.12);
-
 $inverse_fg_color:                    $background;
 $inverse_secondary_fg_color:          rgba($background, 0.7);
 $inverse_hint_fg_color:               rgba($background, 0.5);
@@ -78,30 +40,29 @@ $inverse_divider_color: rgba($background, 0.12);
 $bg_color:             $darkBackground;
 $base_color:           $background;
 $alt_base_color:       mix($base_color, $bg_color, 50%);
-$lighter_bg_color:     $lightBackground;
+$popup_bg_color:       $lightBackground;
 $alt_lighter_bg_color: $background; // for gnome-shell sub menu
-$darker_bg_color:      $darkBackground;
+$button_bg_color:      $background;
 
 $titlebar_bg_color:     $background;
-$alt_titlebar_bg_color: $background;
 
-$panel_bg_color:         rgba($black, $middle_opacity);
-$alt_panel_bg_color:     rgba($black, $lower_opacity);
+$panel_bg_color:         rgba($black, 0.6);
+$alt_panel_bg_color:     rgba($black, 0.3);
 $inverse_panel_bg_color: rgba($inverse_fg_color, 0.1);
 $solid_panel_bg_color:   $darkBackground;
 $opaque_panel_bg_color:  $darkBackground; // for Unity panel which cannot use translucent colors
 
 $gdm_bg_color: $background;
 
-$fill_color:      gtkalpha(currentColor, $lower_opacity);
-$semi_fill_color: gtkalpha(currentColor, $lower_opacity / 2);
-$row_fill_color:  gtkalpha(currentColor, 0.05);
+$fill_color:      gtkalpha(currentColor, 0.24);
+$semi_fill_color: gtkalpha(currentColor, 0.12);
+$row_fill_color:  gtkalpha(currentColor, 0.06);
 
 // Misc colors
 $primary_color:         $lightGray;
 $alt_primary_color:     $gray;
-$accent_color:          $yellow;
-$disabled_accent_color: rgba($accent_color, 0.5);
+$secondary_color:          $yellow;
+$disabled_secondary_color: rgba($secondary_color, 0.5);
 
 $link_color:         $primary_color;
 $visited_link_color: $purple;
@@ -110,7 +71,7 @@ $warning_color: $orange;
 $error_color:   $pink;
 $success_color: $green;
 
-$suggested_color:   $accent_color;
+$suggested_color:   $secondary_color;
 $destructive_color: $pink;
 
 $info_bg_color:     $green;
@@ -119,7 +80,7 @@ $warning_bg_color:  $orange;
 $error_bg_color:    $pink;
 
 $tooltip_bg_color: $lightBackground;
-$tooltip_fg_color: #FF0000;
+$tooltip_fg_color: $foreground;
 
 $border_color:             rgba($black, 0.26);
 $alt_border_color:         rgba($black, 0.26); // for non-native GTK+ apps (e.g. Firefox and Chrome)
@@ -128,12 +89,11 @@ $titlebar_highlight_color: rgba($white, 0.1);
 $alt_highlight_color:      rgba($white, 0.2); // for selection-mode headerbar which colored with $primary_color
 $titlebar_indicator_color: currentColor;
 
-// for Electron/Atom menu which cannot use translucent colors
-$opaque_fg_color:           $white;
-$opaque_secondary_fg_color: mix($white, $base_color, percentage(0.7));
-$opaque_disabled_fg_color:  mix($white, $base_color, percentage(0.5));
-$opaque_divider_color:      mix($white, $base_color, percentage(0.12));
+// FIXME: Electron/Atom menu does not allow translucent colors
+$opaque_fg_color:           $black;
+$opaque_secondary_fg_color: mix($black, $base_color, percentage(0.7));
+$opaque_disabled_fg_color:  mix($black, $base_color, percentage(0.5));
+$opaque_divider_color:      mix($black, $base_color, percentage(0.12));
 
-// FIXME: gtk's @placeholder_text_color API really should use $secondary_fg_color,
-// but it doesn't work with translucent colors. So we use opaque colors instead.
+// FIXME: gtk @placeholder_text_color does not allow translucent colors
 $placeholder_text_color: mix($white, $base_color, percentage(0.7));

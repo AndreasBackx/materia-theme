@@ -1,27 +1,27 @@
 @keyframes ripple_effect {
   from {
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.001, to(alpha(currentColor, 0.15)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.001, to(alpha(currentColor, 0.12)), to(transparent)), linear-gradient(to bottom, transparent);
   }
   to {
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.4, to(alpha(currentColor, 0.15)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0.15));
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.4, to(alpha(currentColor, 0.12)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0.12));
   }
 }
 
 @keyframes flat_ripple_effect {
   from {
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.001, to(alpha(currentColor, 0.15)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0.15));
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.001, to(alpha(currentColor, 0.12)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0.12));
   }
   to {
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.4, to(alpha(currentColor, 0.15)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0.15));
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.4, to(alpha(currentColor, 0.12)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0.12));
   }
 }
 
 @keyframes list_ripple_effect {
   from {
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.001, to(alpha(currentColor, 0.15)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.001, to(alpha(currentColor, 0.12)), to(transparent)), linear-gradient(to bottom, transparent);
   }
   to {
-    background-image: -gtk-gradient(radial, center center, 0, center center, 0.4, to(alpha(currentColor, 0.15)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.4, to(alpha(currentColor, 0.12)), to(transparent)), linear-gradient(to bottom, transparent);
   }
 }
 
@@ -51,7 +51,7 @@
   -GtkStatusbar-shadow-type: none;
   outline-style: solid;
   outline-width: 2px;
-  outline-color: alpha(currentColor, 0.3);
+  outline-color: alpha(currentColor, 0.24);
   outline-offset: -4px;
   outline-radius: 2px;
 }
@@ -143,7 +143,7 @@ GtkAssistant .sidebar:dir(rtl) {
 }
 
 GtkAssistant .sidebar .label {
-  opacity: 0.6;
+  opacity: 0.5;
   padding: 5px 12px 6px;
   font-weight: 500;
 }
@@ -159,11 +159,6 @@ GtkTextView {
 .grid-child {
   padding: 4px;
   border-radius: 2px;
-}
-
-.popover.osd, .app-notification,
-.app-notification.frame, .osd .scale-popup, .floating-bar, .osd {
-  opacity: 0.9;
 }
 
 /*********************
@@ -197,7 +192,7 @@ GtkTextView {
 .entry {
   padding: 7px 8px 8px;
   border-radius: 2px;
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   background-color: #1C1C1C;
   color: #CECECE;
@@ -214,10 +209,10 @@ GtkTextView {
 
 .entry.flat, .notebook GtkGrid > .entry {
   border-radius: 0;
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1);
   border-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.001, to(#CECECE), to(transparent)) 0 0 0/0 0 0px;
   border-radius: 0;
-  box-shadow: inset 0 -1px alpha(currentColor, 0.3);
+  box-shadow: inset 0 -1px alpha(currentColor, 0.24);
   background-color: transparent;
   color: #CECECE;
 }
@@ -225,11 +220,11 @@ GtkTextView {
 .entry.flat:focus, .notebook GtkGrid > .entry:focus {
   border-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(#CECECE), to(transparent)) 0 0 2/0 0 2px;
   box-shadow: inset 0 -2px #CECECE;
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 0 270ms;
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), box-shadow 0 250ms;
 }
 
 .entry.flat:insensitive, .notebook GtkGrid > .entry:insensitive {
-  box-shadow: inset 0 -1px alpha(currentColor, 0.3);
+  box-shadow: inset 0 -1px alpha(currentColor, 0.24);
   background-color: transparent;
   color: #6E6E6E;
 }
@@ -260,7 +255,7 @@ GtkTextView {
 }
 
 .entry.error {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   background-color: #E52E71;
   color: #1C1C1C;
@@ -276,7 +271,7 @@ GtkTextView {
 }
 
 .entry.error.flat, .notebook GtkGrid > .error.entry {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1);
   border-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.001, to(#E52E71), to(transparent)) 0 0 0/0 0 0px;
   border-radius: 0;
   box-shadow: inset 0 -1px #E52E71;
@@ -287,17 +282,17 @@ GtkTextView {
 .entry.error.flat:focus, .notebook GtkGrid > .error.entry:focus {
   border-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(#E52E71), to(transparent)) 0 0 2/0 0 2px;
   box-shadow: inset 0 -2px #E52E71;
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 0 270ms;
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), box-shadow 0 250ms;
 }
 
 .entry.error.flat:insensitive, .notebook GtkGrid > .error.entry:insensitive {
-  box-shadow: inset 0 -1px alpha(currentColor, 0.3);
+  box-shadow: inset 0 -1px alpha(currentColor, 0.24);
   background-color: transparent;
   color: #6E6E6E;
 }
 
 .entry.warning {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   background-color: #D9882B;
   color: #1C1C1C;
@@ -313,7 +308,7 @@ GtkTextView {
 }
 
 .entry.warning.flat, .notebook GtkGrid > .warning.entry {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1);
   border-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.001, to(#D9882B), to(transparent)) 0 0 0/0 0 0px;
   border-radius: 0;
   box-shadow: inset 0 -1px #D9882B;
@@ -324,21 +319,21 @@ GtkTextView {
 .entry.warning.flat:focus, .notebook GtkGrid > .warning.entry:focus {
   border-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(#D9882B), to(transparent)) 0 0 2/0 0 2px;
   box-shadow: inset 0 -2px #D9882B;
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 0 270ms;
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), box-shadow 0 250ms;
 }
 
 .entry.warning.flat:insensitive, .notebook GtkGrid > .warning.entry:insensitive {
-  box-shadow: inset 0 -1px alpha(currentColor, 0.3);
+  box-shadow: inset 0 -1px alpha(currentColor, 0.24);
   background-color: transparent;
   color: #6E6E6E;
 }
 
 .entry.image:not(:hover):not(:active) {
-  color: alpha(currentColor, 0.75);
+  color: alpha(currentColor, 0.7);
 }
 
 .entry.image:insensitive {
-  color: alpha(currentColor, 0.6);
+  color: alpha(currentColor, 0.5);
 }
 
 GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
@@ -369,24 +364,24 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
   background-position: center, center;
   background-size: 90px 90px, auto;
   font-weight: 500;
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  background-color: #242424;
-  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));
+  background-color: #1C1C1C;
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(transparent), to(transparent)), linear-gradient(to bottom, transparent);
   color: #CECECE;
 }
 
 
 .button:hover {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
-  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(transparent), to(transparent)), linear-gradient(to bottom, transparent);
   color: #CECECE;
 }
 
 
 .button:active {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1), background-image 0;
-  animation: ripple_effect 270ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1), background-image 0;
+  animation: ripple_effect 250ms cubic-bezier(0, 0, 0.2, 1) forwards;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
   color: #CECECE;
 }
@@ -394,7 +389,7 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
 
 .button:insensitive {
   box-shadow: none;
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
   color: rgba(110, 110, 110, 0.5);
 }
 
@@ -411,7 +406,7 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
 
 
 .button:checked:insensitive {
-  background-color: alpha(currentColor, 0.3);
+  background-color: rgba(206, 206, 206, 0.3);
   color: rgba(206, 206, 206, 0.5);
 }
 
@@ -424,26 +419,26 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
 .header-bar .button:not(.suggested-action):not(.destructive-action), .frame.action-bar .button:not(.suggested-action):not(.destructive-action), .app-notification .button,
 .app-notification.frame .button,
 .button.flat {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: none;
   background-color: transparent;
-  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));
-  color: alpha(currentColor, 0.75);
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(transparent), to(transparent)), linear-gradient(to bottom, transparent);
+  color: alpha(currentColor, 0.7);
 }
 
 .spinbutton .button:hover, .popover .linked > .button:hover, .notebook tab .button:hover, GtkCalendar.button:hover, .message-dialog.csd .dialog-action-area .button:hover, .sidebar-button.button:hover, .toolbar:not(.search-bar) .button:hover, .titlebar .button:hover:not(.suggested-action):not(.destructive-action),
 .header-bar .button:hover:not(.suggested-action):not(.destructive-action), .frame.action-bar .button:hover:not(.suggested-action):not(.destructive-action), .app-notification .button:hover,
 .button.flat:hover {
   box-shadow: none;
-  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0.15));
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(transparent), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0.12));
   color: currentColor;
 }
 
 .spinbutton .button:active, .popover .linked > .button:active, .notebook tab .button:active, GtkCalendar.button:active, .message-dialog.csd .dialog-action-area .button:active, .sidebar-button.button:active, .toolbar:not(.search-bar) .button:active, .titlebar .button:active:not(.suggested-action):not(.destructive-action),
 .header-bar .button:active:not(.suggested-action):not(.destructive-action), .frame.action-bar .button:active:not(.suggested-action):not(.destructive-action), .app-notification .button:active,
 .button.flat:active {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), background-image 0;
-  animation: flat_ripple_effect 270ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), background-image 0;
+  animation: flat_ripple_effect 250ms cubic-bezier(0, 0, 0.2, 1) forwards;
   box-shadow: none;
   color: currentColor;
 }
@@ -453,7 +448,7 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
 .button.flat:insensitive {
   box-shadow: none;
   background-color: transparent;
-  color: alpha(currentColor, 0.375);
+  color: alpha(currentColor, 0.3);
 }
 
 .spinbutton .button:insensitive > .label, .popover .linked > .button:insensitive > .label, .notebook tab .button:insensitive > .label, GtkCalendar.button:insensitive > .label, .message-dialog.csd .dialog-action-area .button:insensitive > .label, .sidebar-button.button:insensitive > .label, .toolbar:not(.search-bar) .button:insensitive > .label, .titlebar .button:insensitive:not(.suggested-action):not(.destructive-action) > .label, .header-bar .button:insensitive:not(.suggested-action):not(.destructive-action) > .label, .frame.action-bar .button:insensitive:not(.suggested-action):not(.destructive-action) > .label, .app-notification .button:insensitive > .label,
@@ -464,14 +459,14 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
 .toolbar:not(.search-bar) .button:checked, .titlebar .button:checked:not(.suggested-action):not(.destructive-action),
 .header-bar .button:checked:not(.suggested-action):not(.destructive-action), .frame.action-bar .button:checked:not(.suggested-action):not(.destructive-action), .app-notification .button:checked,
 .button.flat:checked {
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
   color: currentColor;
 }
 
 .toolbar:not(.search-bar) .button:checked:insensitive, .titlebar .button:checked:insensitive:not(.suggested-action):not(.destructive-action),
 .header-bar .button:checked:insensitive:not(.suggested-action):not(.destructive-action), .frame.action-bar .button:checked:insensitive:not(.suggested-action):not(.destructive-action), .app-notification .button:checked:insensitive,
 .button.flat:checked:insensitive {
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
   color: alpha(currentColor, 0.5);
 }
 
@@ -500,7 +495,7 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
 
 .button.suggested-action:insensitive {
   box-shadow: none;
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
   color: #6E6E6E;
 }
 
@@ -537,7 +532,7 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
 .toolbar:not(.search-bar) .suggested-action.button:checked, .titlebar .suggested-action.button:checked:not(.suggested-action):not(.destructive-action),
 .header-bar .suggested-action.button:checked:not(.suggested-action):not(.destructive-action), .frame.action-bar .suggested-action.button:checked:not(.suggested-action):not(.destructive-action), .app-notification .suggested-action.button:checked,
 .button.suggested-action.flat:checked {
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
 }
 
 
@@ -549,7 +544,7 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
 
 .button.destructive-action:insensitive {
   box-shadow: none;
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
   color: #6E6E6E;
 }
 
@@ -586,7 +581,7 @@ GtkTreeView .entry:not(:selected), GtkTreeView .entry:not(:selected):focus {
 .toolbar:not(.search-bar) .destructive-action.button:checked, .titlebar .destructive-action.button:checked:not(.suggested-action):not(.destructive-action),
 .header-bar .destructive-action.button:checked:not(.suggested-action):not(.destructive-action), .frame.action-bar .destructive-action.button:checked:not(.suggested-action):not(.destructive-action), .app-notification .destructive-action.button:checked,
 .button.destructive-action.flat:checked {
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
 }
 
 
@@ -707,7 +702,7 @@ GtkVolumeButton.button, .header-bar .button.titlebutton,
 
 .stack-switcher > .button.needs-attention > .label,
 .stack-switcher > .button.needs-attention > GtkImage, .sidebar-item.needs-attention > .label {
-  animation: needs_attention 270ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  animation: needs_attention 250ms cubic-bezier(0, 0, 0.2, 1) forwards;
   background-repeat: no-repeat;
   background-position: right 3px;
   background-size: 6px 6px;
@@ -825,7 +820,7 @@ GtkColorButton.button GtkColorSwatch:first-child:last-child {
 }
 
 .spinbutton .button:active {
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
 }
 
 .spinbutton.vertical .button {
@@ -901,13 +896,13 @@ GtkComboBox.combobox-entry .button:dir(rtl) {
 
 .osd .toolbar, .toolbar.osd, .app-notification,
 .app-notification.frame {
-  transition: border-image 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: border-image 150ms cubic-bezier(0, 0, 0.2, 1);
   padding: 6px;
   border-style: solid;
   border-width: 8px;
   border-image: -gtk-scaled(url("assets/box-shadow.png"), url("assets/box-shadow@2.png")) 10/10px stretch;
   border-radius: 2px;
-  background-color: #1C1C1C;
+  background-color: #242424;
 }
 
 .osd .toolbar:backdrop, .toolbar.osd:backdrop, .app-notification:backdrop {
@@ -936,7 +931,7 @@ GtkComboBox.combobox-entry .button:dir(rtl) {
  ***************/
 .titlebar,
 .header-bar {
-  transition: background-color 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 150ms cubic-bezier(0, 0, 0.2, 1);
   padding: 6px;
   border-radius: 2px 2px 0 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), inset 0 1px rgba(229, 229, 229, 0.1);
@@ -951,7 +946,7 @@ GtkComboBox.combobox-entry .button:dir(rtl) {
 
 .titlebar .title,
 .header-bar .title {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1);
   padding-left: 12px;
   padding-right: 12px;
   font-weight: bold;
@@ -959,7 +954,7 @@ GtkComboBox.combobox-entry .button:dir(rtl) {
 
 .titlebar .subtitle,
 .header-bar .subtitle {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1);
   padding-left: 12px;
   padding-right: 12px;
   font-size: smaller;
@@ -1047,24 +1042,24 @@ GtkComboBox.combobox-entry .button:dir(rtl) {
 
 .titlebar.selection-mode .button.suggested-action,
 .header-bar.selection-mode .button.suggested-action {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  background-color: #242424;
-  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));
+  background-color: #1C1C1C;
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(transparent), to(transparent)), linear-gradient(to bottom, transparent);
   color: #CECECE;
 }
 
 .titlebar.selection-mode .button.suggested-action:hover,
 .header-bar.selection-mode .button.suggested-action:hover {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
-  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(transparent), to(transparent)), linear-gradient(to bottom, transparent);
   color: #CECECE;
 }
 
 .titlebar.selection-mode .button.suggested-action:active,
 .header-bar.selection-mode .button.suggested-action:active {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1), background-image 0;
-  animation: ripple_effect 270ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1), background-image 0;
+  animation: ripple_effect 250ms cubic-bezier(0, 0, 0.2, 1) forwards;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
   color: #CECECE;
 }
@@ -1072,7 +1067,7 @@ GtkComboBox.combobox-entry .button:dir(rtl) {
 .titlebar.selection-mode .button.suggested-action:insensitive,
 .header-bar.selection-mode .button.suggested-action:insensitive {
   box-shadow: none;
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
   color: rgba(110, 110, 110, 0.5);
 }
 
@@ -1148,7 +1143,7 @@ GtkTreeView.view {
   -GtkTreeView-tree-line-width: 1;
   -GtkTreeView-tree-line-pattern: '';
   -GtkTreeView-expander-size: 16;
-  border-left-color: alpha(currentColor, 0.3);
+  border-left-color: alpha(currentColor, 0.24);
   border-top-color: rgba(20, 20, 20, 0.26);
   border-radius: 0;
 }
@@ -1197,7 +1192,7 @@ GtkTreeView.view.trough {
 }
 
 GtkTreeView.view.trough:selected {
-  border-color: alpha(currentColor, 0.3);
+  border-color: alpha(currentColor, 0.24);
 }
 
 column-header .button {
@@ -1238,14 +1233,14 @@ column-header.button.dnd, column-header .button.dnd {
 }
 
 .menubar > .menuitem {
-  transition: all 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
   padding: 4px 8px;
   color: #CECECE;
 }
 
 .menubar > .menuitem:hover {
   transition: none;
-  background-color: alpha(currentColor, 0.15);
+  background-color: rgba(229, 229, 229, 0.12);
   color: #E5E5E5;
 }
 
@@ -1258,7 +1253,7 @@ column-header.button.dnd, column-header .button.dnd {
   margin: 4px 0;
   padding: 4px 0;
   box-shadow: inset 0 1px rgba(229, 229, 229, 0.1);
-  background-color: #1C1C1C;
+  background-color: #242424;
   border: 1px solid rgba(20, 20, 20, 0.26);
 }
 
@@ -1268,7 +1263,7 @@ column-header.button.dnd, column-header .button.dnd {
 }
 
 .menu .menuitem {
-  transition: all 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
   padding: 3px 4px 4px;
   font: initial;
   text-shadow: none;
@@ -1276,7 +1271,7 @@ column-header.button.dnd, column-header .button.dnd {
 
 .menu .menuitem:hover {
   transition: none;
-  background-color: alpha(currentColor, 0.15);
+  background-color: rgba(229, 229, 229, 0.12);
 }
 
 .menu .menuitem:insensitive {
@@ -1306,7 +1301,7 @@ column-header.button.dnd, column-header .button.dnd {
 }
 
 .menu.button:hover {
-  background-color: alpha(currentColor, 0.15);
+  background-color: rgba(229, 229, 229, 0.12);
 }
 
 .menu.button:insensitive {
@@ -1315,7 +1310,7 @@ column-header.button.dnd, column-header .button.dnd {
 }
 
 .menuitem .accelerator {
-  color: alpha(currentColor, 0.6);
+  color: #CECECE;
 }
 
 .csd.popup {
@@ -1326,7 +1321,7 @@ column-header.button.dnd, column-header .button.dnd {
  * Popovers   *
  ***************/
 .popover {
-  transition: box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
   padding: 2px;
   border: 1px solid;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
@@ -1508,7 +1503,7 @@ column-header.button.dnd, column-header .button.dnd {
 }
 
 .notebook tab.top:hover, .notebook tab.top.prelight-page {
-  box-shadow: inset 0 -2px alpha(currentColor, 0.3);
+  box-shadow: inset 0 -2px alpha(currentColor, 0.24);
 }
 
 .notebook tab.top:active, .notebook tab.top.active-page {
@@ -1516,7 +1511,7 @@ column-header.button.dnd, column-header .button.dnd {
 }
 
 .notebook tab.bottom:hover, .notebook tab.bottom.prelight-page {
-  box-shadow: inset 0 2px alpha(currentColor, 0.3);
+  box-shadow: inset 0 2px alpha(currentColor, 0.24);
 }
 
 .notebook tab.bottom:active, .notebook tab.bottom.active-page {
@@ -1524,7 +1519,7 @@ column-header.button.dnd, column-header .button.dnd {
 }
 
 .notebook tab.left:hover, .notebook tab.left.prelight-page {
-  box-shadow: inset -2px 0 alpha(currentColor, 0.3);
+  box-shadow: inset -2px 0 alpha(currentColor, 0.24);
 }
 
 .notebook tab.left:active, .notebook tab.left.active-page {
@@ -1532,7 +1527,7 @@ column-header.button.dnd, column-header .button.dnd {
 }
 
 .notebook tab.right:hover, .notebook tab.right.prelight-page {
-  box-shadow: inset 2px 0 alpha(currentColor, 0.3);
+  box-shadow: inset 2px 0 alpha(currentColor, 0.24);
 }
 
 .notebook tab.right:active, .notebook tab.right.active-page {
@@ -1635,11 +1630,11 @@ column-header.button.dnd, column-header .button.dnd {
 }
 
 .notebook.arrow:not(:hover):not(:active) {
-  color: alpha(currentColor, 0.75);
+  color: #CECECE;
 }
 
 .notebook.arrow:insensitive {
-  color: #6E6E6E;
+  color: rgba(110, 110, 110, 0.5);
 }
 
 /**************
@@ -1772,11 +1767,11 @@ GtkSwitch {
 GtkSwitch.trough {
   border: 8px solid transparent;
   border-radius: 100px;
-  background-color: alpha(currentColor, 0.3);
+  background-color: rgba(110, 110, 110, 0.5);
 }
 
 GtkSwitch.trough:insensitive {
-  color: alpha(currentColor, 0.5);
+  color: rgba(229, 229, 229, 0.12);
 }
 
 GtkSwitch.trough:active {
@@ -1790,7 +1785,7 @@ GtkSwitch.trough:active:insensitive {
 GtkSwitch.slider {
   padding: 5px 4px;
   border-radius: 100px;
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   background-color: #1C1C1C;
   color: #CECECE;
@@ -2042,7 +2037,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
 .scale.scale-has-marks-above.scale-has-marks-below.trough,
 .scale.vertical.scale-has-marks-above.scale-has-marks-below.trough {
   margin: 11px 12px;
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
 }
 
 .scale.trough.highlight,
@@ -2054,7 +2049,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
 .scale.trough.highlight:insensitive,
 .scale.scale-has-marks-above.scale-has-marks-below.trough.highlight:insensitive,
 .scale.vertical.scale-has-marks-above.scale-has-marks-below.trough.highlight:insensitive {
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
 }
 
 .scale.trough:insensitive,
@@ -2072,7 +2067,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
 .scale.separator,
 .scale.scale-has-marks-above.scale-has-marks-below.separator,
 .scale.vertical.scale-has-marks-above.scale-has-marks-below.separator {
-  color: alpha(currentColor, 0.3);
+  color: alpha(currentColor, 0.24);
 }
 
 .scale.scale-has-marks-below {
@@ -2277,7 +2272,7 @@ GtkProgressBar.trough.osd {
 .level-bar.trough {
   padding: 2px;
   border-radius: 2px;
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   background-color: #1C1C1C;
   color: #CECECE;
@@ -2319,7 +2314,7 @@ GtkProgressBar.trough.osd {
 }
 
 .level-bar.fill-block.empty-fill-block {
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
 }
 
 /**********
@@ -2366,23 +2361,23 @@ GtkFontButton .separator.vertical {
 }
 
 .list-row.activatable, .view, column-header .button {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), background-color 0, color 0;
-  box-shadow: inset 0 0 0 10000px alpha(currentColor, 0);
-  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), background-color 0, color 0;
+  box-shadow: inset 0 0 0 10000px transparent;
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(transparent), to(transparent)), linear-gradient(to bottom, transparent);
   background-repeat: no-repeat;
   background-position: center, center;
   background-size: 240px 240px, auto;
 }
 
 .list-row.activatable:hover, .view:hover, column-header .button:hover {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), background-color 0, color 0, box-shadow 0;
-  box-shadow: inset 0 0 0 10000px alpha(currentColor, 0.05);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), background-color 0, color 0, box-shadow 0;
+  box-shadow: inset 0 0 0 10000px alpha(currentColor, 0.06);
 }
 
 .list-row.activatable:active, .view:active, column-header .button:active, GtkPlacesSidebar.sidebar .has-open-popup {
-  transition: all 270ms cubic-bezier(0, 0, 0.2, 1), background-color 0, color 0, background-image 0;
-  animation: list_ripple_effect 270ms cubic-bezier(0, 0, 0.2, 1) forwards;
-  box-shadow: inset 0 0 0 10000px alpha(currentColor, 0.15);
+  transition: all 250ms cubic-bezier(0, 0, 0.2, 1), background-color 0, color 0, background-image 0;
+  animation: list_ripple_effect 250ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  box-shadow: inset 0 0 0 10000px alpha(currentColor, 0.12);
 }
 
 .list-row:selected .button:insensitive {
@@ -2420,7 +2415,7 @@ GtkFontButton .separator.vertical {
 }
 
 .expander:not(:hover):not(:active) {
-  color: alpha(currentColor, 0.75);
+  color: alpha(currentColor, 0.7);
 }
 
 .expander:selected {
@@ -2450,12 +2445,12 @@ GtkCalendar.header {
 }
 
 GtkCalendar:inconsistent {
-  color: alpha(currentColor, 0.5);
+  color: rgba(110, 110, 110, 0.5);
 }
 
 GtkCalendar.highlight {
   font-size: smaller;
-  color: alpha(currentColor, 0.6);
+  color: #CECECE;
 }
 
 /***********
@@ -2504,7 +2499,7 @@ GtkFileChooserDialog .dialog-action-box {
  ***********/
 .sidebar {
   border: none;
-  background-color: #242424;
+  background-color: #181818;
 }
 
 GtkSidebarRow.list-row {
@@ -2516,7 +2511,7 @@ GtkSidebarRow .sidebar-revealer {
 }
 
 GtkSidebarRow .sidebar-icon {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 GtkSidebarRow .sidebar-icon:dir(ltr) {
@@ -2642,7 +2637,7 @@ GtkInfoBar {
  * Tooltips *
  ************/
 .tooltip {
-  color: #1C1C1C;
+  color: #CECECE;
   padding: 4px;
   /* not working */
   border-radius: 2px;
@@ -2650,7 +2645,7 @@ GtkInfoBar {
 }
 
 .tooltip.background {
-  background-color: rgba(36, 36, 36, 0.9);
+  background-color: #242424;
 }
 
 .tooltip.window-frame.csd {
@@ -2667,7 +2662,7 @@ GtkInfoBar {
  * Color Chooser *
  *****************/
 GtkColorSwatch {
-  transition: box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
@@ -2764,7 +2759,7 @@ GtkColorSwatch#add-color-button {
  * Window Decorations *
  *********************/
 .window-frame {
-  transition: box-shadow 180ms cubic-bezier(0, 0, 0.2, 1);
+  transition: box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
   border-radius: 2px 2px 0 0;
   box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22);
   /* this is used for the resize cursor area */
@@ -2815,7 +2810,7 @@ GtkColorSwatch#add-color-button {
 
 .header-bar .button.titlebutton:active,
 .titlebar .button.titlebutton:active {
-  background-image: -gtk-gradient(radial, center center, 0, center center, 0.4, to(alpha(currentColor, 0.15)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0.15));
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.4, to(alpha(currentColor, 0.12)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0.12));
 }
 
 .view:selected, GtkCalendar:selected, .label:selected, .grid-child:selected, .entry:selected, .menuitem.button.flat:selected, .list-row:selected, .sidebar:selected {
@@ -2842,64 +2837,16 @@ GtkColorSwatch#add-color-button {
   border-style: none;
 }
 
-.entry.cursor-handle.top:dir(ltr), .entry.cursor-handle.bottom:dir(rtl),
-.cursor-handle.top:dir(ltr),
-.cursor-handle.bottom:dir(rtl) {
-  -gtk-icon-source: -gtk-scaled(url("assets/text-select-start.png"), url("assets/text-select-start@2.png"));
-  padding-left: 10px;
-}
-
-.entry.cursor-handle.bottom:dir(ltr), .entry.cursor-handle.top:dir(rtl),
-.cursor-handle.bottom:dir(ltr),
-.cursor-handle.top:dir(rtl) {
-  -gtk-icon-source: -gtk-scaled(url("assets/text-select-end.png"), url("assets/text-select-end@2.png"));
-  padding-right: 10px;
-}
-
 .entry.cursor-handle.insertion-cursor:dir(ltr), .entry.cursor-handle.insertion-cursor:dir(rtl),
 .cursor-handle.insertion-cursor:dir(ltr),
 .cursor-handle.insertion-cursor:dir(rtl) {
   -gtk-icon-source: -gtk-scaled(url("assets/scale-horz-marks-before-slider.png"), url("assets/scale-horz-marks-before-slider@2.png"));
 }
 
-.entry.cursor-handle.top:hover:dir(ltr), .entry.cursor-handle.bottom:hover:dir(rtl),
-.cursor-handle.top:hover:dir(ltr),
-.cursor-handle.bottom:hover:dir(rtl) {
-  -gtk-icon-source: -gtk-scaled(url("assets/text-select-start-hover.png"), url("assets/text-select-start-hover@2.png"));
-  padding-left: 10px;
-}
-
-.entry.cursor-handle.bottom:hover:dir(ltr), .entry.cursor-handle.top:hover:dir(rtl),
-.cursor-handle.bottom:hover:dir(ltr),
-.cursor-handle.top:hover:dir(rtl) {
-  -gtk-icon-source: -gtk-scaled(url("assets/text-select-end-hover.png"), url("assets/text-select-end-hover@2.png"));
-  padding-right: 10px;
-}
-
-.entry.cursor-handle.insertion-cursor:hover:dir(ltr), .entry.cursor-handle.insertion-cursor:hover:dir(rtl),
-.cursor-handle.insertion-cursor:hover:dir(ltr),
-.cursor-handle.insertion-cursor:hover:dir(rtl) {
-  -gtk-icon-source: -gtk-scaled(url("assets/scale-horz-marks-before-slider-hover.png"), url("assets/scale-horz-marks-before-slider-hover@2.png"));
-}
-
-.entry.cursor-handle.top:active:dir(ltr), .entry.cursor-handle.bottom:active:dir(rtl),
-.cursor-handle.top:active:dir(ltr),
-.cursor-handle.bottom:active:dir(rtl) {
-  -gtk-icon-source: -gtk-scaled(url("assets/text-select-start-active.png"), url("assets/text-select-start-active@2.png"));
-  padding-left: 10px;
-}
-
-.entry.cursor-handle.bottom:active:dir(ltr), .entry.cursor-handle.top:active:dir(rtl),
-.cursor-handle.bottom:active:dir(ltr),
-.cursor-handle.top:active:dir(rtl) {
-  -gtk-icon-source: -gtk-scaled(url("assets/text-select-end-active.png"), url("assets/text-select-end-active@2.png"));
-  padding-right: 10px;
-}
-
-.entry.cursor-handle.insertion-cursor:active:dir(ltr), .entry.cursor-handle.insertion-cursor:active:dir(rtl),
-.cursor-handle.insertion-cursor:active:dir(ltr),
-.cursor-handle.insertion-cursor:active:dir(rtl) {
-  -gtk-icon-source: -gtk-scaled(url("assets/scale-horz-marks-before-slider-active.png"), url("assets/scale-horz-marks-before-slider-active@2.png"));
+.entry.cursor-handle.insertion-cursor:dir(ltr), .entry.cursor-handle.insertion-cursor:dir(rtl),
+.cursor-handle.insertion-cursor:dir(ltr),
+.cursor-handle.insertion-cursor:dir(rtl) {
+  -gtk-icon-source: -gtk-scaled(url("assets/scale-horz-marks-before-slider.png"), url("assets/scale-horz-marks-before-slider@2.png"));
 }
 
 /* Decouple the font of context menus from their entry/textview */
@@ -2910,7 +2857,7 @@ GtkColorSwatch#add-color-button {
 .touch-selection {
   font: initial;
   color: #CECECE;
-  background-color: #1C1C1C;
+  background-color: #242424;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
 }
 
@@ -3000,7 +2947,7 @@ GtkColorSwatch#add-color-button {
   border-style: solid solid none;
   border-color: rgba(20, 20, 20, 0.26);
   border-radius: 3px 3px 0 0;
-  background-color: #1C1C1C;
+  background-color: rgba(28, 28, 28, 0.9);
   background-clip: padding-box;
 }
 
@@ -3025,6 +2972,18 @@ EelEditableLabel.entry {
   transition: none;
 }
 
+.nautilus-canvas-item.dim-label, .nautilus-canvas-item.label.separator, .titlebar .nautilus-canvas-item.subtitle,
+.header-bar .nautilus-canvas-item.subtitle,
+.nautilus-list-dim-label {
+  color: #CECECE;
+}
+
+.nautilus-canvas-item.dim-label:selected, .nautilus-canvas-item.label.separator:selected, .titlebar .nautilus-canvas-item.subtitle:selected,
+.header-bar .nautilus-canvas-item.subtitle:selected,
+.nautilus-list-dim-label:selected {
+  color: rgba(28, 28, 28, 0.7);
+}
+
 .nautilus-desktop.nautilus-canvas-item {
   color: #1C1C1C;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -3040,7 +2999,7 @@ EelEditableLabel.entry {
     background-color: transparent;
   }
   50% {
-    background-color: alpha(currentColor, 0.3);
+    background-color: alpha(currentColor, 0.24);
   }
   100% {
     background-color: transparent;
@@ -3067,7 +3026,7 @@ EelEditableLabel.entry {
 }
 
 .disk-space-display.free {
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
   color: #6E6E6E;
 }
 
@@ -3116,7 +3075,7 @@ NemoWindow .sidebar .cell:selected {
  * Software *
  ************/
 .button.install-progress:insensitive {
-  background-color: alpha(currentColor, 0.3);
+  background-color: alpha(currentColor, 0.24);
 }
 
 /***********
@@ -3178,14 +3137,14 @@ UnityDecoration.top:backdrop {
 
 UnityDecoration.menuitem,
 UnityDecoration .menuitem {
-  color: alpha(currentColor, 0.75);
+  color: #CECECE;
 }
 
 UnityDecoration.menubar.menuitem:hover,
 UnityDecoration.menubar .menuitem *:hover {
   box-shadow: inset 0 -2px currentColor;
   background-color: transparent;
-  color: currentColor;
+  color: #E5E5E5;
 }
 
 .background:not(.csd) :not(.titlebar) .header-bar {
@@ -3211,14 +3170,14 @@ UnityPanelWidget:backdrop,
 
 .unity-panel.menuitem,
 .unity-panel .menuitem {
-  color: alpha(currentColor, 0.75);
+  color: #CECECE;
 }
 
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
   box-shadow: inset 0 -2px currentColor;
   background-color: transparent;
-  color: currentColor;
+  color: #E5E5E5;
 }
 
 @keyframes playbackmenuitem_spinner {
@@ -3295,6 +3254,13 @@ these are pretty self explicative */
 @define-color warning_color #D9882B;
 @define-color error_color #E52E71;
 @define-color success_color #9CCC3D;
+/*
+these colors are exported for the window manager and shouldn't be used in applications,
+read if you used those and something break with a version upgrade you're on your own... */
+@define-color wm_title #E5E5E5;
+@define-color wm_unfocused_title #CECECE;
+@define-color wm_highlight rgba(229, 229, 229, 0.1);
+@define-color wm_bg #1C1C1C;
 /*
 FIXME this is really an API */
 @define-color content_view_bg #1C1C1C;

@@ -298,3 +298,34 @@ $black: #000000;
 
 // White
 $white: #FFFFFF;
+
+// Rubecula colors
+
+$black: #141414;
+$blackGray: #1C1C1C;
+$darkerGray: #242424;
+$darkGray: #404040;
+$gray: #6E6E6E;
+$lightGray: #CECECE;
+$white: #E5E5E5;
+
+$yellow: #CCC47A;
+$pink: #E52E71;
+$green: #9CCC3D;
+$cyan: #6CC7D9;
+$orange: #D9882B;
+$purple: #A082D9;
+
+// Background colors
+$darkBackground: $black;
+$background: $blackGray;
+$lightBackground: $darkerGray;
+$highlightBackground: $darkGray;
+
+$border: $darkGray;
+$matchBorder: $yellow;
+
+// Foregrounds
+$brightForeground: $white;
+$foreground: $lightGray;
+$inactiveForeground: $gray;

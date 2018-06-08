@@ -13,8 +13,10 @@ overlay > revealer {
   &.right > scrolledwindow.frame { margin-left: 32px; }
 }
 
-.terminix-session-sidebar, // for backwards compatibility
-.tilix-session-sidebar { background-image: image($lighter_bg_color); }
+.terminix-session-sidebar, // for backward compatibility
+.tilix-session-sidebar { background-image: image($popup_bg_color); }
+
+.terminal-titlebar button { border-radius: 0; }
 
 button.image-button.session-new-button { min-width: $medium_size - 4px; }
 
@@ -35,7 +37,35 @@ window.background > box.vertical > scrolledwindow > widget toolbar {
 /************
  * Chromium *
  ************/
-tooltip.chromium { background-color: $tooltip_bg_color; }
+window.background.chromium {
+  background-color: if($variant == 'light', $bg_color, $popup_bg_color);
+
+  // FIXME: no way to change the toolbar button colors only
+  // toolbar button { color: $secondary_fg_color; }
+
+  // toolbar's border-bottom refers to button's border
+  entry,
+  > button:not(.suggested-action):not(.destructive-action) { border: 1px solid $alt_border_color; }
+
+  > button {
+    box-shadow: none;
+    background-size: auto;
+
+    &:hover { background-image: image($row_fill_color); }
+
+    &:active { background-image: image($semi_fill_color); }
+  }
+
+  // workaround for headerbar's non-animatable buttons
+  headerbar button:active { background-size: 1000% 1000%; }
+
+  spinner { color: $primary_color; }
+
+  // entry uses this as well
+  textview { background-color: $popup_bg_color; }
+}
+
+tooltip.background.chromium { background-color: rgba($tooltip_bg_color, 1); }
 
 
 /***********
@@ -71,9 +101,9 @@ window.background:not(.csd) {
       background-size: auto;
       // color: $fg_color;
 
-      &:hover { background-image: image(gtkalpha(currentColor, 0.1 / 2)); }
+      &:hover { background-image: image($row_fill_color); }
 
-      &:active { background-image: image(gtkalpha(currentColor, 0.1)); }
+      &:active { background-image: image($semi_fill_color); }
     }
 
     // use 16px assets for hard-coded sizing
@@ -100,7 +130,7 @@ window.background:not(.csd) {
 // Firefox now uses this for selected items
 text:selected { @extend %selected_items; }
 
-// for backwards compatibility
+// for backward compatibility
 window.background:not(.csd) {
   > widget {
     > menubar {

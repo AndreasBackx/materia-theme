@@ -81,10 +81,12 @@ stage {
 }
 
 .modal-dialog-linked-button {
-  min-height: 40px;
-  padding: 0 16px;
-  border-top: 1px solid rgba(20, 20, 20, 0.26) !important;
+  min-height: 36px;
+  margin: 6px;
+  padding: 0 8px;
+  margin-right: 0;
   border-right-width: 0;
+  border-radius: 2px;
   font-size: 10.5pt;
   font-weight: 500;
   color: #CECECE;
@@ -130,17 +132,19 @@ stage {
 }
 
 .modal-dialog-linked-button:first-child {
-  border-radius: 0px 0px 0px 2px;
+  border-radius: 2px;
 }
 
 .modal-dialog-linked-button:last-child {
+  margin-right: 6px;
   border-right-width: 0px;
-  border-radius: 0px 0px 2px 0px;
+  border-radius: 2px;
 }
 
 .modal-dialog-linked-button:first-child:last-child {
+  margin-right: 6px;
   border-right-width: 0px;
-  border-radius: 0px 0px 2px 2px;
+  border-radius: 2px;
 }
 
 /* Entries */
@@ -240,7 +244,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   -slider-active-background-color: #CCC47A;
   -slider-active-border-color: transparent;
   -slider-border-width: 0;
-  -slider-handle-radius: 7px;
+  -slider-handle-radius: 6px;
 }
 
 /* Check Boxes */
@@ -282,11 +286,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .check-box:hover:checked StBin {
-  background-color: rgba(204, 196, 122, 0.15);
+  background-color: rgba(204, 196, 122, 0.12);
 }
 
 .check-box:active:checked StBin {
-  background-color: rgba(204, 196, 122, 0.3);
+  background-color: rgba(204, 196, 122, 0.24);
 }
 
 /* Switches */
@@ -320,12 +324,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .shell-link:hover {
   color: #CECECE;
-  background-color: rgba(206, 206, 206, 0.15);
+  background-color: rgba(206, 206, 206, 0.12);
 }
 
 .shell-link:active {
   color: #CECECE;
-  background-color: rgba(206, 206, 206, 0.3);
+  background-color: rgba(206, 206, 206, 0.24);
 }
 
 /* Modal Dialogs */
@@ -356,7 +360,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .modal-dialog .run-dialog-entry {
   width: 20em;
-  margin-bottom: 6px;
+  margin-bottom: 0;
 }
 
 .modal-dialog .run-dialog-error-box {
@@ -742,12 +746,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .popup-menu .popup-menu-item:checked.selected {
-  background-color: #b3b3b3;
+  background-color: #b9b9b9;
   color: #1C1C1C;
 }
 
 .popup-menu .popup-menu-item:checked:active {
-  background-color: #999999;
+  background-color: #a3a3a3;
   color: #1C1C1C !important;
 }
 
@@ -845,7 +849,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .osd-window .level {
   height: 8px;
   border-radius: 0;
-  background-color: rgba(206, 206, 206, 0.3);
+  background-color: rgba(229, 229, 229, 0.12);
   color: #CECECE;
 }
 
@@ -2160,24 +2164,25 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .notification-banner .notification-actions {
   background-color: transparent;
   padding-top: 0;
-  border-top: 1px solid rgba(20, 20, 20, 0.26);
-  spacing: 1px;
+  padding: 6px;
+  spacing: 6px;
 }
 
 .notification-banner .notification-button {
-  min-height: 40px;
-  padding: 0 16px;
+  min-height: 36px;
+  padding: 0 8px;
+  border-radius: 2px;
   background-color: transparent;
   color: #CECECE;
   font-weight: 500;
 }
 
 .notification-banner .notification-button:first-child {
-  border-radius: 0 0 0 2px;
+  border-radius: 2px;
 }
 
 .notification-banner .notification-button:last-child {
-  border-radius: 0 0 2px 0;
+  border-radius: 2px;
 }
 
 .notification-banner .notification-button:hover, .notification-banner .notification-buttonfocus {
@@ -2342,7 +2347,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: none;
   color: inherit;
   color: #CECECE;
-  background-color: #242424;
+  background-color: #1C1C1C;
   border-color: transparent;
   box-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
   text-shadow: none;
@@ -2358,7 +2363,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .keyboard-key:hover, .keyboard-key:checked {
   color: #CECECE;
-  background-color: #242424;
+  background-color: #1C1C1C;
   border-color: transparent;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.24), 0 3px 3px rgba(0, 0, 0, 0.345);
   text-shadow: none;
@@ -2367,7 +2372,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .keyboard-key:active {
   color: #CECECE;
-  background-color: #575757;
+  background-color: #474747;
   border-color: transparent;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.24), 0 3px 3px rgba(0, 0, 0, 0.345);
   text-shadow: none;
@@ -2567,7 +2572,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .login-dialog .modal-dialog-button:default:active {
   color: #1C1C1C;
-  background-color: #97925e;
+  background-color: #a29c63;
   border-color: transparent;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.24), 0 3px 3px rgba(0, 0, 0, 0.345);
   text-shadow: none;
