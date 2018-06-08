@@ -16,7 +16,7 @@ if [ ! -z "${SIZE_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _SIZE_VARIANTS <<< "${SIZE_VARIANTS:-}"
 fi
 
-SASSC_OPT="-M -t expanded"
+SASSC_OPT="-m -t expanded"
 
 echo "== Generating the CSS..."
 

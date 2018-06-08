@@ -6,7 +6,7 @@ REPO_DIR=$(cd $(dirname $0) && pwd)
 SRC_DIR=${REPO_DIR}/src
 
 DEST_DIR=/usr/share/themes
-THEME_NAME=Materia
+THEME_NAME=Rubecula
 COLOR_VARIANTS=('' '-dark' '-light')
 SIZE_VARIANTS=('' '-compact')
 
@@ -72,7 +72,7 @@ install() {
   mkdir -p                                                                      ${THEME_DIR}/chrome
   cp -r ${SRC_DIR}/chrome/chrome-theme${color}.crx                              ${THEME_DIR}/chrome/chrome-theme.crx
   cp -r ${SRC_DIR}/chrome/chrome-scrollbar${ELSE_DARK}.crx                      ${THEME_DIR}/chrome/chrome-scrollbar.crx
-  
+
   mkdir -p                                                                      ${THEME_DIR}/cinnamon
   cp -r ${SRC_DIR}/cinnamon/cinnamon${color}${size}.css                         ${THEME_DIR}/cinnamon/cinnamon.css
   cp -r ${SRC_DIR}/cinnamon/thumbnail.png                                       ${THEME_DIR}/cinnamon/thumbnail.png
@@ -157,7 +157,7 @@ while [[ $# -gt 0 ]]; do
       ;;
     -g|--gdm)
       gdm=true
-      shift 1 
+      shift 1
       ;;
     -c|--color)
       shift
