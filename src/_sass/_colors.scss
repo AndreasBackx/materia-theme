@@ -90,10 +90,10 @@ $alt_highlight_color:      rgba($white, 0.2); // for selection-mode headerbar wh
 $titlebar_indicator_color: currentColor;
 
 // FIXME: Electron/Atom menu does not allow translucent colors
-$opaque_fg_color:           $black;
-$opaque_secondary_fg_color: mix($black, $base_color, percentage(0.7));
-$opaque_disabled_fg_color:  mix($black, $base_color, percentage(0.5));
-$opaque_divider_color:      mix($black, $base_color, percentage(0.12));
+$opaque_fg_color:           $white;
+$opaque_secondary_fg_color: mix($white, $base_color, percentage(0.7));
+$opaque_disabled_fg_color:  mix($white, $base_color, percentage(0.5));
+$opaque_divider_color:      mix($white, $base_color, percentage(0.12));
 
 // FIXME: gtk @placeholder_text_color does not allow translucent colors
 $placeholder_text_color: mix($white, $base_color, percentage(0.7));

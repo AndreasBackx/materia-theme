@@ -1898,19 +1898,19 @@ menuitem accelerator {
 }
 
 .popup:not(.csd) menu menuitem {
-  color: #141414;
+  color: #E5E5E5;
 }
 
 .popup:not(.csd) menu menuitem:hover {
-  background-color: #1b1b1b;
+  background-color: #343434;
 }
 
 .popup:not(.csd) menu menuitem:disabled {
-  color: #181818;
+  color: #818181;
 }
 
 .popup:not(.csd) menu accelerator {
-  color: #161616;
+  color: darkgray;
 }
 
 /************
